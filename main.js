@@ -42,7 +42,7 @@ document.getElementById("subBtn").addEventListener("click", () => {
 
 
 
-// get data from Firebase and making The CRUD opertaion
+// get data from Firebase and set data to be updated by sending data inside table row to form input 
 
 function getDataFromFireBase() {
 
