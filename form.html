@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js" integrity="sha512-OvBgP9A2JBgiRad/mM36mkzXSXaJE9BEIENnVEmeZdITvwT09xnxLtT4twkCa8m/loMbPHsvPl0T8lRGVBwjlQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap-grid.min.css" integrity="sha512-q0LpKnEKG/pAf1qi1SAyX0lCNnrlJDjAvsyaygu07x8OF4CEOpQhBnYiFW6YDUnOOcyAEiEYlV4S9vEc6akTEw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="contianer m-3">
+
+            <h1 class="h1"> Employees Data</h1>
+        </div>
+    </header>
+ <!-- Alaa#3864 -->
+
+    <section class="container-fluid m-2 bg-light">
+        <div class="d-flex flex-column p-4">
+            
+            <input id="formContent" class="m-2 form-control" type="text" placeholder="ID:" readonly>
+            <input id="formContent" class="m-2 form-control" type="text" placeholder="Name:">
+            <input id="formContent" class="m-2 form-control" type="email" placeholder="email:">
+            <input id="formContent" class="m-2 form-control" type="number" placeholder="Age:">
+            <input id="formContent" class="m-2 form-control" type="number" placeholder="Salary:">
+
+            <label for="dep">Department location</label>
+            <select  class="w-25 form-control form-select m-2" name="dep" id="formContent">
+                <option value="Cairo">Cairo</option>
+                <option value="Alexandria">Alexandria</option>
+                <option value="Quena">Quena</option>
+                <option value="Aswan">Aswan</option>
+            </select>
+            <div class="m-3 container">
+                <button id="subBtn" class="btn btn-success">Add Employee</button>
+            </div>
+        </div>
+    </section>
+    <br>
+    <!-- display tabel -->
+
+    <section class="container-fluid m-2 bg-light">
+        <table id="table" class=" table table-striped table-light p-3 m-3">
+            <thead>
+                <tr >
+                    <th scope="col"> ID</th>
+                    <th scope="col"> Name</th>
+                    <th scope="col"> Email</th>
+                    <th scope="col"> Age</th>
+                    <th scope="col"> Salary</th>
+                    <th scope="col"> Department</th>
+                    <th scope="col"> Actions</th>
+                </tr>
+               
+            </thead>
+            <tbody id="tableBody">
+
+            </tbody>
+        </table>
+    </section>
+    <script src="./main.js"></script>
+</body>
+</html>
