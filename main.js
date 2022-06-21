@@ -2,8 +2,10 @@ export let userData = {}
 
 import{getDataFromFireBase} from "./dataShower.js"
 import{updateDataToDatabase} from "./updateUsers.js"
-
+import { deleteAllDataInDatabase } from "./deleteUsers.js"
  export let formBody = document.querySelectorAll("#formContent")
+
+ // save button event listener
 document.getElementById("subBtn").addEventListener("click", () => {
 
     // setting userData object with values from form 
@@ -44,8 +46,12 @@ document.getElementById("subBtn").addEventListener("click", () => {
 
 
 
-
-
+document.getElementById("delBtn").addEventListener("click",()=>{
+    confirm("Do u want to delete Entire Data?")
+    if (confirm) {
+        deleteAllDataInDatabase(getDataFromFireBase)
+    }
+})
 
 
 

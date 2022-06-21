@@ -13,25 +13,37 @@ export function getDataFromFireBase() {
                 if (httpReq.status == 200) {
 
                     let data = JSON.parse(httpReq.response)
+                    // check if there is no data comming from firebase
+                    if(data != null){
 
-                    console.log(data)
-                    tableBody.innerHTML = ""
-                    for (let employee in data) {
-                        tableBody.innerHTML += `
-                        <tr class="dataInfo"><td>${employee}</td>
-                        <td>${data[employee].Name}</td>
-                        <td>${data[employee].Email}</td>
-                        <td>${data[employee].Age}</td>
-                        <td>${data[employee].Salary}</td>
-                        <td>${data[employee].Department}</td>
+                        tableBody.innerHTML = ""
+                        for (let employee in data) {
+                            tableBody.innerHTML += `
+                            <tr class="dataInfo"><td>${employee}</td>
+                            <td>${data[employee].Name}</td>
+                            <td>${data[employee].Email}</td>
+                            <td>${data[employee].Age}</td>
+                            <td>${data[employee].Salary}</td>
+                            <td>${data[employee].Department}</td>
+    
+                            <td>
+                            <button id="UpBtn" class="btn btn-warning" >Update</button>
+                            <button id="DelBtn" class="btn btn-danger">Delete</button>
+                            </td>
+    
+                            <tr>
+                        `
+                        }
+                    }
 
-                        <td>
-                        <button id="UpBtn" class="btn btn-warning" >Update</button>
-                        <button id="DelBtn" class="btn btn-danger">Delete</button>
-                        </td>
-
-                        <tr>
-                    `
+                    else{
+                        tableBody.innerHTML = `
+                        
+                            <div style="height:20vh; width:100%">
+                                
+                                <h4 style=" color: grey;position: absolute; right:40%; top:40%;"> 
+                                There is no data In database</h4>
+                        `
                     }
 
 
